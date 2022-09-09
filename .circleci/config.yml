@@ -49,4 +49,3 @@ jobs:
             docker push $DOCKER_HUB_USER_ID/udagram-frontend:local
             docker tag udagram-reverseproxy $DOCKER_HUB_USER_ID/udagram-reverseproxy:v1
             docker push $DOCKER_HUB_USER_ID/udagram-reverseproxy:v1
-
