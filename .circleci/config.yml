@@ -33,7 +33,7 @@ jobs:
       - run:
           name: docker build
           command: |
-            docker-compose --tlsverify build
+            docker-compose --verbose build
       - run:
           name: docker ps
           command: |
