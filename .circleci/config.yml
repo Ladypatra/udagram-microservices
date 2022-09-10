@@ -20,16 +20,16 @@ jobs:
           name: Install dependencies
           command: |
             apk add --no-cache \
-              py-pip=9.0.0-r1
+              py-pip=9.0.0-r1 \
+              openssl
             pip install \
               --upgrade pip \
               docker-compose==1.15.0 \
               awscli==1.11.76
-      # - run:
-      #     name: compose tls version
-      #     command: |
-      #       set COMPOSE_TLS_VERSION=TLSv1_2
-      #       set DOCKER_TLS_VERIFY=0
+      - run:
+          name: openssl version
+          command: |
+            openssl -v
       - run:
           name: docker build
           command: |
